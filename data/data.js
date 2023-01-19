@@ -1,0 +1,32 @@
+const posts = [
+  {period: '0 to 7',
+definedColor: 'blue',
+definedValue: 'Responsability',
+valueImg: '/',
+definedSkill: 'Manipulation',
+skillImg: '/',
+proudThings: ['Bla', 'bla', 'bla'],
+id: 0,
+
+},
+{period: '0 to 7',
+definedColor: 'blue',
+definedValue: 'Responsability',
+valueImg: '/',
+definedSkill: 'Manipulation',
+skillImg: '/',
+proudThings: ['Bla', 'bla', 'bla'],
+id: 1,
+
+},
+{period: '0 to 7',
+definedColor: 'blue',
+definedValue: 'Responsability',
+valueImg: '/',
+definedSkill: 'Manipulation',
+skillImg: '/',
+proudThings: ['Bla', 'bla', 'bla'],
+id: 2,
+
+},
+]
