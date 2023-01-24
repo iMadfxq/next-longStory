@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Hero from '@/components/home/hero'
 
 
 export default function Home() {
-  return <h1>life's things I'm proud of</h1>
+  return <Hero />
 }
