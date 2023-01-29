@@ -11,10 +11,10 @@ export default function Hero() {
         <Image></Image>
       </div>
       <div>
+        <h1>My journey as a human</h1>
         <div>
           steps
         </div>
-        <h1>My journey as a human</h1>
       </div>
     </section>
   )
