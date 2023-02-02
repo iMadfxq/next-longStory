@@ -1,35 +1,74 @@
-import StageHero from "@/components/stage/StageHero"
-import StageHighlights from "@/components/stage/StageHighlights"
-import { getAllStages, getSpecificStage, getSpecificStageByPeriod, getStagesIds, getStagesPeriod } from "@/data/data"
+import StageHero from "@/components/stage/StageHero";
+import StageHighlights from "@/components/stage/StageHighlights";
+import StageNavigation from "@/components/stage/StageNavigation";
+import {
+  getAllStages,
+  getSpecificStage,
+  getSpecificStageById,
+  getSpecificStageByPeriod,
+  getStagesIds,
+  getStagesPeriod,
+} from "@/data/data";
 
 export function getStaticPaths() {
-  const allSlugs = getStagesPeriod()
-  const paths = allSlugs.map(slug => ({params: {stage: slug.replace(/\s+/g, '-').toLowerCase()}}))
+  const allSlugs = getStagesPeriod();
+  const paths = allSlugs.map((slug) => ({
+    params: { stage: slug.replace(/\s+/g, "-").toLowerCase() },
+  }));
   return {
     paths,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
 export function getStaticProps(context) {
-  const {stage} = context.params
+  const { stage } = context.params;
 
-  const fullStageObject = getSpecificStageByPeriod(stage.replace(/-/g, ' '))
+  const fullStageObject = getSpecificStageByPeriod(stage.replace(/-/g, " "));
 
-  
-  return {
-    props: {postData: fullStageObject}
+  const numberOfStages = getAllStages().length;
+
+  let nextStage = 1
+  let prevStage = 1
+
+
+
+  if(fullStageObject.id < numberOfStages-1) {
+    const nextStageObj = getSpecificStageById(fullStageObject.id + 1)
+    nextStage = nextStageObj.period.replace(/\s+/g, "-").toLowerCase()
   }
+
+  if(fullStageObject.id !== 0) {
+    const prevStageObj = getSpecificStageById(fullStageObject.id - 1)
+    prevStage = prevStageObj.period.replace(/\s+/g, "-").toLowerCase()
+  }
+
+
+
+  return {
+    props: {
+      postData: fullStageObject,
+      currentStageId: fullStageObject.id,
+      numberOfStages,
+      nextStage : nextStage,
+      prevStage : prevStage,
+    },
+  };
 }
 
-
-function Stage({postData}) {
+function Stage({ postData, currentStageId, numberOfStages, nextStage, prevStage }) {
   return (
     <>
       <StageHero title={postData.period} />
       <StageHighlights />
+      <StageNavigation
+        currentStageId={currentStageId}
+        numberOfStages={numberOfStages}
+        nextStage={nextStage}
+        prevStage={prevStage}
+      />
     </>
-  )
+  );
 }
 
-export default Stage
+export default Stage;
