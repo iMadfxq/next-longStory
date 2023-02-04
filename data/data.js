@@ -30,7 +30,7 @@ const posts = [
     id: 1,
   },
   {
-    period: "15 to 19",
+    period: "16 to 19",
     stageDescription: "A baby, no conciosness",
     highlights: [
       {

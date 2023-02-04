@@ -1,3 +1,4 @@
+import Contact from "@/components/stage/Contact";
 import StageHero from "@/components/stage/StageHero";
 import StageHighlights from "@/components/stage/StageHighlights";
 import StageNavigation from "@/components/stage/StageNavigation";
@@ -28,35 +29,37 @@ export function getStaticProps(context) {
 
   const numberOfStages = getAllStages().length;
 
-  let nextStage = 1
-  let prevStage = 1
+  let nextStage = 1;
+  let prevStage = 1;
 
-
-
-  if(fullStageObject.id < numberOfStages-1) {
-    const nextStageObj = getSpecificStageById(fullStageObject.id + 1)
-    nextStage = nextStageObj.period.replace(/\s+/g, "-").toLowerCase()
+  if (fullStageObject.id < numberOfStages - 1) {
+    const nextStageObj = getSpecificStageById(fullStageObject.id + 1);
+    nextStage = nextStageObj.period.replace(/\s+/g, "-").toLowerCase();
   }
 
-  if(fullStageObject.id !== 0) {
-    const prevStageObj = getSpecificStageById(fullStageObject.id - 1)
-    prevStage = prevStageObj.period.replace(/\s+/g, "-").toLowerCase()
+  if (fullStageObject.id !== 0) {
+    const prevStageObj = getSpecificStageById(fullStageObject.id - 1);
+    prevStage = prevStageObj.period.replace(/\s+/g, "-").toLowerCase();
   }
-
-
 
   return {
     props: {
       postData: fullStageObject,
       currentStageId: fullStageObject.id,
       numberOfStages,
-      nextStage : nextStage,
-      prevStage : prevStage,
+      nextStage: nextStage,
+      prevStage: prevStage,
     },
   };
 }
 
-function Stage({ postData, currentStageId, numberOfStages, nextStage, prevStage }) {
+function Stage({
+  postData,
+  currentStageId,
+  numberOfStages,
+  nextStage,
+  prevStage,
+}) {
   return (
     <>
       <StageHero title={postData.period} />
@@ -67,6 +70,7 @@ function Stage({ postData, currentStageId, numberOfStages, nextStage, prevStage 
         nextStage={nextStage}
         prevStage={prevStage}
       />
+      {currentStageId == numberOfStages - 1 && <Contact />}
     </>
   );
 }

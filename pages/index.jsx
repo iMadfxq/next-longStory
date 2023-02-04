@@ -18,7 +18,7 @@ export function getStaticProps() {
 export default function Home({stages}) {
   return (
   <>
-  <Hero />
+  <Hero stages={stages} />
   <StageList stages={stages}  />
   </>)
 }
