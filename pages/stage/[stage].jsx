@@ -1,4 +1,5 @@
 import Contact from "@/components/stage/Contact";
+import Milestones from "@/components/stage/Milestones";
 import StageHero from "@/components/stage/StageHero";
 import StageHighlights from "@/components/stage/StageHighlights";
 import StageNavigation from "@/components/stage/StageNavigation";
@@ -63,13 +64,14 @@ function Stage({
   return (
     <>
       <StageHero title={postData.period} />
-      <StageHighlights />
+      <StageHighlights highlights={postData.highlights} />
       <StageNavigation
         currentStageId={currentStageId}
         numberOfStages={numberOfStages}
         nextStage={nextStage}
         prevStage={prevStage}
       />
+      <Milestones />
       {currentStageId == numberOfStages - 1 && <Contact />}
     </>
   );
