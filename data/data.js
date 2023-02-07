@@ -4,10 +4,10 @@ const posts = [
     stageDescription: "A baby, no conciosness",
     highlights: [
       {
-        definedColor: "blue",
+        definedColor: "orange",
         definedValue: "Responsability",
         valueImg: "/",
-        definedSkill: "Manipulation",
+        definedSkill: "Organization",
         skillImg: "/",
       },
     ],
@@ -16,13 +16,13 @@ const posts = [
   },
   {
     period: "8 to 15",
-    stageDescription: "A baby, no conciosness",
+    stageDescription: "A teen, no freedom",
     highlights: [
       {
         definedColor: "blue",
-        definedValue: "Responsability",
+        definedValue: "Independence",
         valueImg: "/",
-        definedSkill: "Manipulation",
+        definedSkill: "Autonomy",
         skillImg: "/",
       },
     ],
@@ -31,13 +31,13 @@ const posts = [
   },
   {
     period: "16 to 19",
-    stageDescription: "A baby, no conciosness",
+    stageDescription: "An adult, unstoppable",
     highlights: [
       {
-        definedColor: "blue",
-        definedValue: "Responsability",
+        definedColor: "black",
+        definedValue: "Congruence",
         valueImg: "/",
-        definedSkill: "Manipulation",
+        definedSkill: "Learning",
         skillImg: "/",
       },
     ],
