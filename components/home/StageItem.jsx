@@ -8,7 +8,7 @@ export default function StageItem({stage}) {
     
     <article>
       <div>
-        <Image src={stage.periodImg} width={200}></Image>
+        <Image src={stage.periodImg} width={200} ></Image>
       </div>
       <div>
         <h3>{stage.period}</h3>

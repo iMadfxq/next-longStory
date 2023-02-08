@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export default function StageHero({title}) {
+export default function StageHero({title, stageImage}) {
   return (
     <section>
-      <Image />
+      <Image src={stageImage} width={50} />
       <div>
         <h1>{title}</h1>
         <p>A phrase for this stage</p>

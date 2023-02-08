@@ -64,7 +64,7 @@ function Stage({
 }) {
   return (
     <>
-      <StageHero title={postData.period} />
+      <StageHero title={postData.period} stageImage={postData.periodImg} />
       <StageHighlights highlights={postData.highlights} />
       <Milestones proudThings={postData.proudThings} />
       <StageNavigation
