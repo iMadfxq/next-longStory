@@ -6,7 +6,7 @@ export default function HighlightItem({ title, description, color, image }) {
   if (color) {
     return (
       <article>
-        <div style={{backgroundColor: color, widht: '50', height: '50'}}></div>
+        <div style={{backgroundColor: color, width: '50px', height: '50px'}}></div>
         <h3>{title}</h3>
         <p>{description}</p>
       </article>
@@ -14,7 +14,7 @@ export default function HighlightItem({ title, description, color, image }) {
   }
   return (
     <article>
-      <Image src={Pic} width={120}></Image>
+      <Image src={image} width={120}></Image>
       <h3>{title}</h3>
       <p>{description}</p>
     </article>
