@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import Pic from "../../public/images/placeholder.jpeg"
 
 export default function StageItem({stage}) {
   return (
@@ -7,7 +8,7 @@ export default function StageItem({stage}) {
     
     <article>
       <div>
-        <Image></Image>
+        <Image src={Pic} width={200}></Image>
       </div>
       <div>
         <h3>{stage.period}</h3>

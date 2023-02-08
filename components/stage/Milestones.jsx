@@ -1,13 +1,10 @@
-export default function Milestones() {
+export default function Milestones({proudThings}) {
   return (
     <>
       <h1>Important Milestones</h1>
       <section>
         <ul>
-          <li>Milestone</li>
-          <li>Milestone</li>
-          <li>Milestone</li>
-
+          {proudThings.map(m => <li>{m}</li>)}
         </ul>
       </section>
     </>
