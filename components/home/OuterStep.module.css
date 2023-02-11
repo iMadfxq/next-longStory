@@ -1,13 +1,35 @@
 .step {
-  width: 50px;
-  height: 50px;
-  background-color: grey;
+  font-size: 50px;
   position: relative;
+  transform: rotate(90deg);
 }
 .innerstep {
   top: 0;
-  right: 50%;
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
+}
+
+.up {
+position: absolute;
+top: 0;
+}
+
+.down {
+  position: absolute;
+  bottom: 0;
+}
+
+.-0 {
+  left: 0px;
+
+}
+
+.-1 {
+  left: 70px;
+}
+
+.-2 {
+  left: 140px;
+
 }
