@@ -1,7 +1,7 @@
 import StageItem from "./StageItem";
-import Classes from './StageList.module.css'
+import Classes from './stageList.module.css'
 
-export default function stageList({stages}) {
+export default function StageList({stages}) {
   return (
     <section className={Classes.container}>
     
