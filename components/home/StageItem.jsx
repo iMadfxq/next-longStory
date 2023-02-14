@@ -6,11 +6,12 @@ import Classes from './StageItem.module.css'
 
 export default function StageItem({stage}) {
   return (
+    <>
     <Link href={`/stage/${stage.period.replace(/\s+/g, '-').toLowerCase()}`}>
     
     <article className={Classes.container}>
       <div>
-        <Image src={stage.periodImg} width={200} ></Image>
+        <Image src={stage.periodImg} width={200} alt={stage.period}></Image>
       </div>
       <div>
         <h3>{stage.period}</h3>
@@ -18,5 +19,6 @@ export default function StageItem({stage}) {
       </div>
     </article>
     </Link>
+    </>
   )
 }

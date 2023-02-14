@@ -6,10 +6,10 @@ export default function StepsList({ stages }) {
     <div className={Classes.container}>
       {stages.map((stage, i) => {
         if (i != 0 && i % 2 != 0) {
-          return <OuterStep stage={stage} stepPosition={"up"} index={i} />;
+          return <OuterStep key={i} stage={stage} stepPosition={"up"} index={i} />;
         }
 
-        return <OuterStep stage={stage} stepPosition={"down"} index={i} />;
+        return <OuterStep key={i} stage={stage} stepPosition={"down"} index={i} />;
       })}
     </div>
   );

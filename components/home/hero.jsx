@@ -9,7 +9,7 @@ export default function Hero({stages}) {
   return (
     <section className={Classes.container}>
       <div>
-        <Image src={Pic} width={200} ></Image>
+        <Image src={Pic} width={200} alt={'a picture of Oscar Gomez'}></Image>
       </div>
       <div>
         <h1>My journey as a human</h1>

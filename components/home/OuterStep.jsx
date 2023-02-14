@@ -9,7 +9,7 @@ export default function OuterStep({ stepPosition, stage, index }) {
       <div
         className={`${Classes.step} ${
           stepPosition === "up" ? Classes.up : Classes.down
-        } ${Classes["-" + index]}`}
+        } ${Classes["_" + index]}`}
         onClick={() => setStepOpen(true)}
       >
         👣{" "}
