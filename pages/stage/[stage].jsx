@@ -1,3 +1,5 @@
+import Classes from '../../styles/stage.module.css'
+
 import Contact from "@/components/stage/Contact";
 import HomeButton from "@/components/stage/HomeButton";
 import Milestones from "@/components/stage/Milestones";
@@ -63,7 +65,7 @@ function Stage({
   prevStage,
 }) {
   return (
-    <>
+    <section style={{backgroundColor: postData.highlights.definedColor}} className={Classes.container}>
       <StageHero title={postData.period} stageImage={postData.periodImg} />
       <StageHighlights highlights={postData.highlights} />
       <Milestones proudThings={postData.proudThings} />
@@ -75,7 +77,7 @@ function Stage({
       />
       {currentStageId == numberOfStages - 1 && <Contact />}
       <HomeButton />
-    </>
+    </section>
   );
 }
 
