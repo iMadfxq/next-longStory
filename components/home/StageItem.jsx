@@ -13,7 +13,7 @@ export default function StageItem({stage}) {
       <div>
         <Image src={stage.periodImg} width={200} alt={stage.period}></Image>
       </div>
-      <div>
+      <div className={Classes.text}>
         <h3>{stage.period}</h3>
         <p>{stage.stageDescription}</p>
       </div>

@@ -66,15 +66,18 @@ function Stage({
 }) {
   return (
     <section style={{backgroundColor: postData.highlights.definedColor}} className={Classes.container}>
-      <StageHero title={postData.period} stageImage={postData.periodImg} />
+      <section className={Classes.content}>
+
+      <StageHero title={postData.period} stageImage={postData.periodImg} stageDescription={postData.stageDescription}/>
       <StageHighlights highlights={postData.highlights} />
       <Milestones proudThings={postData.proudThings} />
+      </section>
       <StageNavigation
         currentStageId={currentStageId}
         numberOfStages={numberOfStages}
         nextStage={nextStage}
         prevStage={prevStage}
-      />
+        />
       {currentStageId == numberOfStages - 1 && <Contact />}
       <HomeButton />
     </section>

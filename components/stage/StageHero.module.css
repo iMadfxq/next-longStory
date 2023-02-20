@@ -1,4 +1,11 @@
 .container {
   display: flex;
   align-items: center;
+  background-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  padding: 24px;
+}
+
+.title {
+  font-size: 32px;
 }

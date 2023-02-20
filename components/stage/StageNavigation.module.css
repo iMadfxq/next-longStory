@@ -9,12 +9,12 @@
   top: 50%;
   right: 0;
   font-size: 40px;
-  background-color: grey;
+  background-color: var(--background-color);
   padding: 20px;
   text-decoration: none;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
-  color: white;
+  color: black;
 }
 
 .leftButton {
@@ -22,10 +22,10 @@
   top: 50%;
   left: 0;
   font-size: 40px;
-  background-color: grey;
+  background-color: var(--background-color);
   padding: 20px;
   text-decoration: none;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
-  color: white;
+  color: black;
 }
