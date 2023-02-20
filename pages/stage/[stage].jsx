@@ -1,6 +1,5 @@
 import Classes from '../../styles/stage.module.css'
 
-import Contact from "@/components/stage/Contact";
 import HomeButton from "@/components/stage/HomeButton";
 import Milestones from "@/components/stage/Milestones";
 import StageHero from "@/components/stage/StageHero";
@@ -78,7 +77,6 @@ function Stage({
         nextStage={nextStage}
         prevStage={prevStage}
         />
-      {currentStageId == numberOfStages - 1 && <Contact />}
       <HomeButton />
     </section>
   );

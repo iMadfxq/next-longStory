@@ -4,6 +4,6 @@
   align-items: center;
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
-  padding: 24px;
+  padding: 16px;
   margin: 8px;
 }

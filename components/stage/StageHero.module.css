@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   background-color: var(--primary-color);
   box-shadow: var(--box-shadow);
